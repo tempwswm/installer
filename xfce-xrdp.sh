@@ -1,5 +1,5 @@
 sudo apt update
-sudo apt install -y xfce4 xrdp baobab
+sudo apt install -y xfce4 xrdp task-xfce-desktop baobab
 sudo adduser xrdp ssl-cert
 sudo systemctl restart xrdp
-echo "\n\nrun if useful:\n\tsudo apt install -y task-xfce-desktop"
+sudo apt clean
