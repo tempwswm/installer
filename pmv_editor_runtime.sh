@@ -1,5 +1,5 @@
 sudo apt update
-sudo apt install -y python3-pip rubberband-cli
+sudo apt install -y python3-pip rubberband-cli ffmpeg
 sudo apt clean
 pip3 --no-cache-dir install moviepy Pillow matplotlib pyrubberband jupyter spleeter
 pip3 --no-cache-dir install jupyter_contrib_nbextensions jupyter_nbextensions_configurator
