@@ -4,8 +4,10 @@ sed -i 's#http://deb.debian.org#https://mirrors.163.com#g' /etc/apt/sources.list
 ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 #换编码
 apt update && apt install locales -y
-locale-gen en_US en_US.UTF-8 zh_CN.UTF-8
-#update-locale LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-export LANG=en_US.UTF-8
+sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen
+sed -i '/zh_CN.UTF-8/s/^# //g' /etc/locale.gen
+locale-gen
+update-locale LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+
 #安装基础工具
-apt install wget nano sudo whiptail -y
+apt install wget nano sudo whiptail curl -y
