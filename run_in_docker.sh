@@ -1,7 +1,7 @@
-#更换时区
-ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 #换源
 sed -i 's#http://deb.debian.org#https://mirrors.163.com#g' /etc/apt/sources.list
+#更换时区
+ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 #换编码
 apt update && sudo apt install locales -y
 locale-gen en_US en_US.UTF-8 zh_CN.UTF-8
