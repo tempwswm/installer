@@ -3,7 +3,7 @@ sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install keyboard-configuration -y
 
 # 远程桌面组件
-sudo apt install -y xfce4  xrdp baobab
+sudo apt install -y xfce4  xrdp dbus-x11 baobab
 
 #可选工具包
 #sudo apt install -y xfce4-goodies
