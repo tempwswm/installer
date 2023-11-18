@@ -6,7 +6,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install keyboard-configuration -y
 sudo apt install -y xfce4  xrdp dbus-x11 baobab
 
 #可选工具包
-#sudo apt install -y xfce4-goodies
+sudo apt install -y xfce4-goodies
 #sudo apt install -y task-xfce-desktop
 
 #设置xrdp
