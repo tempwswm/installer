@@ -1,5 +1,5 @@
 #换源
-sed -i 's#http://deb.debian.org#http://mirrors.163.com#g' /etc/apt/sources.list
+sed -i 's#http://deb.debian.org#http://mirrors.tuna.tsinghua.edu.cn#g' /etc/apt/sources.list
 #更换时区
 ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 #换编码
