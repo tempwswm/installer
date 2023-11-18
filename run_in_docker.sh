@@ -10,5 +10,5 @@ locale-gen
 update-locale LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 
 #安装基础工具
-apt install wget nano sudo whiptail curl -y
+apt install wget nano sudo whiptail curl net-tools -y
 
