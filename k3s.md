@@ -9,10 +9,10 @@ curl -sfL https://get.k3s.io | sh -s - server \
 
 ```
 
-取消默认的NodePort
+取消默认的traefik loadBalance 释放端口
 
 ```shell
-还没写好
+kubectl patch svc/traefik  -n kube-system --patch '{"spec":{"type":"ClusterIP"}}'
 ```
 
 
