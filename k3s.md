@@ -30,8 +30,8 @@ kubectl patch svc/traefik  -n kube-system --patch '{"spec":{"type":"ClusterIP"}}
 
 ```shell
 curl -sfL https://get.k3s.io | K3S_URL=https://$MASTER_IP sh -s - agent --token SERVER_TOKEN --docker \
-  --node-label area=NODE_AREA \
-  --node-label stable=year
+  --node-label area=$NODE_AREA \
+  --node-label stable=$NODE_STABLE
 ```
 ## 使用ghcr.io
 ```shell
@@ -48,10 +48,14 @@ configs:
 EOF
 
 #重启k3s
+systemctl restart k3s
+```
+### 自动补全
+```shell
+source <(kubectl completion bash)
 ```
 
-
-安装Kuboard
+## 安装Kuboard
 默认账号密码admin:Kuboard123 
 记得修改密码
 
