@@ -1,5 +1,14 @@
 ## 先安装docker
 
+## 设置环境变量，供后面使用
+```shell
+export SERVER_TOKEN =""
+export NODE_AREA = ""
+export nODE_STABLE = "year"
+export MASTER_IP = ""
+export GHCR_TOKEN = ""
+```
+
 ## 控制节点
 
 ```shell
@@ -24,7 +33,22 @@ curl -sfL https://get.k3s.io | K3S_URL=https://<ip> sh -s - agent --token <token
   --node-label area=<area> \
   --node-label stable=year
 ```
+## 使用ghcr.io
+```shell
+cat > /etc/rancher/k3s/registries.yaml << EOF
+mirrors:
+  ghcr:
+    endpoint:
+      - "https://ghcr.io"
+configs:
+  "ghcr.io":
+    auth:
+      username: "user"
+      password: $GHCR_TOKEN
+EOF
 
+#重启k3s
+```
 
 
 安装Kuboard
