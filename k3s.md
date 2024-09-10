@@ -4,7 +4,7 @@
 ```shell
 export SERVER_TOKEN =""
 export NODE_AREA = ""
-export nODE_STABLE = "year"
+export NODE_STABLE = "year"
 export MASTER_IP = ""
 export GHCR_TOKEN = ""
 ```
@@ -14,7 +14,7 @@ export GHCR_TOKEN = ""
 ```shell
 curl -sfL https://get.k3s.io | sh -s - server \
   --flannel-backend wireguard-native \
-  --token <token> --docker
+  --token SERVER_TOKEN --docker
 
 ```
 
@@ -29,8 +29,8 @@ kubectl patch svc/traefik  -n kube-system --patch '{"spec":{"type":"ClusterIP"}}
 ## 工作节点
 
 ```shell
-curl -sfL https://get.k3s.io | K3S_URL=https://<ip> sh -s - agent --token <token> --docker \
-  --node-label area=<area> \
+curl -sfL https://get.k3s.io | K3S_URL=https://MASTER_IP sh -s - agent --token SERVER_TOKEN --docker \
+  --node-label area=NODE_AREA \
   --node-label stable=year
 ```
 ## 使用ghcr.io
@@ -61,7 +61,7 @@ docker run -d \
   --name=kuboard \
   -p 880:80/tcp \
   -p 10081:10081/tcp \
-  -e KUBOARD_ENDPOINT="http://<ip>:880" \
+  -e KUBOARD_ENDPOINT="http://MASTER_IP:880" \
   -e KUBOARD_AGENT_SERVER_TCP_PORT="10081" \
   -v /root/kuboard-data:/data \
   eipwork/kuboard:v3
