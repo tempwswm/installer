@@ -73,10 +73,16 @@ docker run -d \
 ## 安装Longhorn（1.7.2）
 ### 安装环境
 ```shell
-apt install -y jq open-iscsi nfs-common cryptsetup modprobe
+apt install -y jq open-iscsi nfs-common cryptsetup
 #检查环境
 curl -sSfL https://raw.githubusercontent.com/longhorn/longhorn/v1.7.2/scripts/environment_check.sh | bash
 ```
+
+### 内核检查不通过开启内核
+```shell
+modprobe iscsi_tcp
+```
+
 ### 安装
 ```shell
 kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v1.7.2/deploy/longhorn.yaml
