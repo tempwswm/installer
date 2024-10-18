@@ -70,3 +70,17 @@ docker run -d \
   -v /root/kuboard-data:/data \
   eipwork/kuboard:v3
 ```
+## 安装Longhorn（1.7.2）
+### 安装环境
+```shell
+apt install -y jq open-iscsi nfs-common cryptsetup modprobe
+#检查环境
+curl -sSfL https://raw.githubusercontent.com/longhorn/longhorn/v1.7.2/scripts/environment_check.sh | bash
+```
+### 安装
+```shell
+kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v1.7.2/deploy/longhorn.yaml
+#查看进度
+kubectl get pods -n longhorn-system -w
+```
+
