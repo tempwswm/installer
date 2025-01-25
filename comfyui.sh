@@ -23,3 +23,9 @@ cd custom_nodes
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 cd ..
 
+#ComfyUI_ProPainter
+cd custom_nodes
+git clone https://github.com/daniabib/ComfyUI_ProPainter_Nodes
+uv pip install -r requirements.txt
+apt-get install libxrender1 libxtst6 libxi6
+cd ..
