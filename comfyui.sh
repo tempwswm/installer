@@ -21,18 +21,20 @@ uv pip install -r requirements.txt
 uv pip install pip
 
 #安装节点管理器
-cd custom_nodes
-git clone https://github.com/ltdrdata/ComfyUI-Manager.git
-cd ComfyUI-Manager
-uv pip install -r requirements.txt
-cd .. 
-cd ..
+git clone https://github.com/ltdrdata/ComfyUI-Manager.git custom_nodes/ComfyUI-Manager
+uv pip install -r custom_nodes/ComfyUI-Manager/requirements.txt
 
-#ComfyUI_ProPainter
-cd custom_nodes
-git clone https://github.com/daniabib/ComfyUI_ProPainter_Nodes
-cd ComfyUI_ProPainter_Nodes
-uv pip install -r requirements.txt
+#opencv依赖
 apt-get install libxrender1 libxtst6 libxi6 -y
-cd ..
-cd ..
+
+#用到的节点库
+git clone https://github.com/daniabib/ComfyUI_ProPainter_Nodes custom_nodes/ComfyUI_ProPainter_Nodes
+uv pip install -r custom_nodes/ComfyUI_ProPainter_Nodes/requirements.txt
+git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite custom_nodes/ComfyUI-VideoHelperSuite
+uv pip install -r custom_nodes/ComfyUI-VideoHelperSuite/requirements.txt
+git clone https://github.com/cubiq/ComfyUI_essentials.git custom_nodes/ComfyUI_essentials
+uv pip install -r custom_nodes/ComfyUI_essentials/requirements.txt
+git clone https://github.com/evanspearman/ComfyMath.git custom_nodes/ComfyMath
+uv pip install -r custom_nodes/ComfyMath/requirements.txt
+git clone https://github.com/kijai/ComfyUI-KJNodes.git custom_nodes/ComfyUI-KJNodes
+uv pip install -r custom_nodes/ComfyUI-KJNodes/requirements.txt
