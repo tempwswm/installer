@@ -4,7 +4,8 @@
 apt install git -y
 
 #comfyui
-git clone https://github.com/comfyanonymous/ComfyUI.git && cd ComfyUI
+git clone https://github.com/comfyanonymous/ComfyUI.git 
+cd ComfyUI
 
 
 #配置环境
