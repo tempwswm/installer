@@ -38,3 +38,5 @@ git clone https://github.com/evanspearman/ComfyMath.git custom_nodes/ComfyMath
 uv pip install -r custom_nodes/ComfyMath/requirements.txt
 git clone https://github.com/kijai/ComfyUI-KJNodes.git custom_nodes/ComfyUI-KJNodes
 uv pip install -r custom_nodes/ComfyUI-KJNodes/requirements.txt
+
+#   python main.py --listen 0.0.0.0
