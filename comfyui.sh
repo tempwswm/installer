@@ -28,6 +28,8 @@ uv pip install -r custom_nodes/ComfyUI-Manager/requirements.txt
 apt-get install libxrender1 libxtst6 libxi6 -y
 
 #用到的节点库
+git clone https://github.com/yolain/ComfyUI-Easy-Use custom_nodes/ComfyUI-Easy-Use
+uv pip install -r custom_nodes/ComfyUI-Easy-Use/requirements.txt
 git clone https://github.com/daniabib/ComfyUI_ProPainter_Nodes custom_nodes/ComfyUI_ProPainter_Nodes
 uv pip install -r custom_nodes/ComfyUI_ProPainter_Nodes/requirements.txt
 git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite custom_nodes/ComfyUI-VideoHelperSuite
