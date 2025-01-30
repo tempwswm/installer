@@ -44,4 +44,4 @@ git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts custom_nodes/C
 uv pip install -r custom_nodes/ComfyUI-Custom-Scripts/requirements.txt
 
 
-#   python main.py --listen 0.0.0.0
+#   python main.py --max-upload-size 2000 --listen 0.0.0.0
