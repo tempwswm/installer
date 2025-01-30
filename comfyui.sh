@@ -41,7 +41,7 @@ uv pip install -r custom_nodes/ComfyMath/requirements.txt
 git clone https://github.com/kijai/ComfyUI-KJNodes.git custom_nodes/ComfyUI-KJNodes
 uv pip install -r custom_nodes/ComfyUI-KJNodes/requirements.txt
 git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts custom_nodes/ComfyUI-Custom-Scripts
-uv pip install -r custom_nodes/ComfyUI-Custom-Scripts/requirements.txt
+#uv pip install -r custom_nodes/ComfyUI-Custom-Scripts/requirements.txt
 
 
 #   python main.py --max-upload-size 2000 --listen 0.0.0.0
